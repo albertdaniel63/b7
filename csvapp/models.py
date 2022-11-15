@@ -18,6 +18,20 @@ class Csv_emp(models.Model):
         db_table = 'emp'
 
 
+class Employee(models.Model):
+    Emp_Name = models.CharField(max_length=200)
+    Emp_Salary = models.IntegerField()
+    is_boolean = models.BooleanField(default=True)
+    Emp_company = models.CharField(max_length=200)
+
+    
+    def __str__(self):
+        return f"{self.Emp_Name} -- {self.Emp_company}"
+
+    class Meta:
+        db_table = "empl"
+
+
 
 
 
