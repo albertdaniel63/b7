@@ -32,6 +32,12 @@ class Employee(models.Model):
         db_table = "empl"
 
 
+    def create_employee():
+        emp = Employee(Emp_name='Rakesh', Emp_Salary=35000, Emp_company="Accenture")
+        emp.save()
+        return emp
+
+
 
 
 
